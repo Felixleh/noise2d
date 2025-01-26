@@ -1,0 +1,17 @@
+[project]
+name = "pynoise2d"
+version = "0.0.1"
+description="Tool for generating noise as 2d array."
+requires-python = ">=3.7"
+
+[build-system]
+requires = ["scikit-build-core>=0.3.3", "pybind11", "pybind11-stubgen"]
+build-backend = "scikit_build_core.build"
+
+[tool.scikit-build]
+build-dir = "build"
+cmake.build-type = "Release"
+cmake.source-dir = "."
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
